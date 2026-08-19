@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy 19th Birthday, Titli Didi ✨</title>
+<meta name="theme-color" content="#120d1f" />
+<style>
+  :root{
+    --bg:#0d0915;
+    --bg2:#160e22;
+    --glass:rgba(255,255,255,.08);
+    --line:rgba(255,255,255,.14);
+    --text:#fff8ff;
+    --muted:#d7cbe0;
+    --pink:#ff7fcf;
+    --purple:#aa86ff;
+    --gold:#ffd782;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:var(--text); background:
+      radial-gradient(circle at 20% 10%, rgba(255,127,207,.18), transparent 28%),
+      radial-gradient(circle at 80% 20%, rgba(170,134,255,.20), transparent 30%),
+      radial-gradient(circle at 50% 90%, rgba(255,215,130,.08), transparent 28%),
+      linear-gradient(135deg,var(--bg),var(--bg2));
+    min-height:100vh; overflow-x:hidden;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+    background-image:radial-gradient(rgba(255,255,255,.7) .7px,transparent .7px);
+    background-size:34px 34px;opacity:.16;
+  }
+  .orb{position:fixed;border-radius:50%;filter:blur(60px);opacity:.25;pointer-events:none;z-index:0}
+  .orb.a{width:220px;height:220px;background:var(--pink);left:-60px;top:18vh;animation:drift 10s ease-in-out infinite alternate}
+  .orb.b{width:260px;height:260px;background:var(--purple);right:-90px;top:48vh;animation:drift 12s ease-in-out infinite alternate-reverse}
+  @keyframes drift{to{transform:translate(35px,-25px) scale(1.08)}}
+
+  .wrap{position:relative;z-index:1}
+  .nav{
+    position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:20;
+    width:min(92%,980px);display:flex;justify-content:space-between;align-items:center;
+    padding:10px 14px;border:1px solid var(--line);background:rgba(13,9,21,.5);
+    backdrop-filter:blur(18px);border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.25)
+  }
+  .brand{font-size:.86rem;letter-spacing:.12em;text-transform:uppercase;color:#f7e9fb;font-weight:700}
+  .sound-btn,.jump-btn{
+    border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--text);
+    border-radius:999px;padding:9px 13px;cursor:pointer;font-weight:600;transition:.25s
+  }
+  .sound-btn:hover,.jump-btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.11)}
+
+  section{width:min(1100px,92%);margin:auto;padding:110px 0 90px}
+  .hero{min-height:100svh;display:grid;place-items:center;padding-top:120px}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line);
+    background:rgba(255,255,255,.05);border-radius:999px;color:#f2dff2;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}
+  h1{font-size:clamp(3.4rem,8vw,7.3rem);line-height:.92;letter-spacing:-.055em;margin:18px 0 20px}
+  .gradient{background:linear-gradient(90deg,#fff 0%,#ffc8e9 45%,#b9a1ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{font-size:clamp(1rem,2vw,1.18rem);line-height:1.75;color:var(--muted);max-width:600px}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+  .primary{
+    border:0;cursor:pointer;padding:13px 18px;border-radius:999px;color:#1b1020;font-weight:800;
+    background:linear-gradient(135deg,#ffc1e6,#e0ceff);box-shadow:0 10px 35px rgba(200,140,255,.22);transition:.25s
+  }
+  .primary:hover{transform:translateY(-3px) scale(1.02)}
+
+  .photo-wrap{position:relative;display:grid;place-items:center}
+  .photo-card{
+    width:min(430px,88vw);aspect-ratio:4/5;padding:10px;border-radius:30px;
+    background:linear-gradient(145deg,rgba(255,255,255,.24),rgba(255,255,255,.05));
+    border:1px solid rgba(255,255,255,.18);box-shadow:0 30px 80px rgba(0,0,0,.38);transform:rotate(2deg);animation:float 5s ease-in-out infinite
+  }
+  .photo-inner{height:100%;overflow:hidden;border-radius:22px;position:relative;background:linear-gradient(145deg,#2c1734,#5d3777)}
+  .photo-inner img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.04) contrast(1.02)}
+  .photo-overlay{position:absolute;inset:auto 0 0 0;padding:55px 20px 20px;background:linear-gradient(transparent,rgba(9,5,15,.78))}
+  .photo-overlay p{font-size:.85rem;color:#f6eaf8;letter-spacing:.08em;text-transform:uppercase}
+  .age-badge{position:absolute;top:-18px;right:-8px;width:95px;height:95px;border-radius:50%;display:grid;place-items:center;
+    background:linear-gradient(145deg,var(--gold),#ff9acb);color:#21131f;font-weight:900;font-size:2rem;box-shadow:0 18px 45px rgba(255,180,160,.24);animation:pulse 2.6s ease-in-out infinite}
+  .age-badge span{font-size:.7rem;display:block;text-align:center;line-height:1}
+  @keyframes pulse{50%{transform:translateY(-7px) rotate(4deg)}}
+  @keyframes float{50%{transform:rotate(-1deg) translateY(-8px)}}
+
+  .section-title{font-size:clamp(2rem,5vw,4rem);letter-spacing:-.04em;margin-bottom:14px}
+  .section-copy{color:var(--muted);line-height:1.75;max-width:680px}
+  .glass-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+  .glass-card{padding:24px;border:1px solid var(--line);background:rgba(255,255,255,.05);backdrop-filter:blur(16px);border-radius:22px;transition:.3s}
+  .glass-card:hover{transform:translateY(-5px);background:rgba(255,255,255,.075)}
+  .icon{font-size:1.55rem;margin-bottom:14px}.glass-card h3{margin-bottom:8px}.glass-card p{color:var(--muted);line-height:1.65;font-size:.95rem}
+
+  .letter{margin-top:30px;display:grid;grid-template-columns:1fr .8fr;gap:20px}
+  .letter-card,.count-card{padding:30px;border:1px solid var(--line);background:rgba(255,255,255,.055);backdrop-filter:blur(18px);border-radius:26px}
+  .letter-card h3{font-size:1.5rem;margin-bottom:15px}.letter-card p{color:#e9ddec;line-height:1.85}
+  .count-card{display:grid;place-items:center;text-align:center;min-height:260px;position:relative;overflow:hidden}
+  .count-number{font-size:7rem;font-weight:950;line-height:.9;background:linear-gradient(135deg,#fff,#ff9edb,#a98aff);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .count-label{color:var(--muted);letter-spacing:.15em;text-transform:uppercase;font-size:.78rem;margin-top:10px}
+
+  .surprise{text-align:center;padding-bottom:130px}
+  .surprise-box{padding:44px 24px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(255,127,207,.07),rgba(170,134,255,.08));border-radius:30px;position:relative;overflow:hidden}
+  .reveal{max-height:0;opacity:0;overflow:hidden;transition:.8s ease}.reveal.open{max-height:500px;opacity:1;margin-top:26px}
+  .reveal p{font-size:clamp(1.2rem,2.4vw,1.7rem);line-height:1.7;color:#fff3fb;max-width:780px;margin:auto}
+
+  footer{text-align:center;padding:0 0 32px;color:#9f91a8;font-size:.8rem}
+  .heart{position:fixed;bottom:-30px;font-size:15px;z-index:2;pointer-events:none;animation:rise linear forwards;opacity:.8}
+  @keyframes rise{to{transform:translateY(-110vh) translateX(var(--x));opacity:0;rotate:280deg}}
+  .confetti{position:fixed;width:8px;height:14px;top:-20px;z-index:30;pointer-events:none;animation:confetti 2.2s ease-in forwards}
+  @keyframes confetti{to{transform:translate3d(var(--dx),110vh,0) rotate(800deg);opacity:0}}
+  .fade{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}.fade.show{opacity:1;transform:none}
+
+  @media(max-width:850px){
+    .hero-grid,.letter{grid-template-columns:1fr}.hero{padding-top:130px}.hero-copy{order:1}.photo-wrap{order:2}.glass-grid{grid-template-columns:1fr}
+    .age-badge{right:2px}.photo-card{width:min(390px,86vw)}
+  }
+  @media(max-width:520px){
+    section{padding:90px 0 70px}.nav{top:8px}.brand{font-size:.7rem}.sound-btn{padding:8px 10px}
+    h1{font-size:clamp(3rem,17vw,5rem)}.sub{font-size:.98rem}.photo-card{border-radius:24px}.photo-inner{border-radius:18px}.age-badge{width:78px;height:78px;font-size:1.65rem}
+  }
+</style>
+</head>
+<body>
+<div class="orb a"></div><div class="orb b"></div>
+<div class="wrap">
+  <nav class="nav">
+    <div class="brand">For Titli Didi · 20.08.2026</div>
+    <button class="sound-btn" id="soundBtn" aria-label="Toggle music">♫ Music</button>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy fade">
+          <span class="eyebrow">✦ A little birthday universe</span>
+          <h1>Happy <span class="gradient">19th</span><br/>Birthday, Titli Didi.</h1>
+          <p class="sub">Some people make a home feel warmer just by being there. This tiny page is for one of those people — my elder sister, Titli.</p>
+          <div class="cta-row">
+            <button class="primary" onclick="document.getElementById('message').scrollIntoView({behavior:'smooth'})">Open the birthday page ↓</button>
+            <button class="jump-btn" onclick="triggerConfetti(); document.getElementById('surprise').scrollIntoView({behavior:'smooth'})">Make it sparkle ✨</button>
+          </div>
+        </div>
+
+        <div class="photo-wrap fade">
+          <div class="photo-card">
+            <div class="photo-inner">
+              <!-- Replace assets/titli.jpg with Titli's actual photo -->
+              <img id="heroPhoto" src="assets/titli.jpg" alt="Titli Didi" onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='grid';">
+              <div id="photoFallback" style="display:none;place-items:center;height:100%;text-align:center;padding:30px;color:#f6eafb;background:radial-gradient(circle at 50% 30%,rgba(255,127,207,.25),transparent 40%),linear-gradient(145deg,#26152f,#4d2d63)">
+                <div><div style="font-size:3.5rem;margin-bottom:12px">📸</div><div style="font-weight:800;font-size:1.2rem">Titli's Photo</div><div style="color:#d8cbe0;margin-top:7px;font-size:.9rem">Put the photo at<br><b>assets/titli.jpg</b></div></div>
+              </div>
+              <div class="photo-overlay"><p>20 August 2007 → 20 August 2026</p></div>
+            </div>
+          </div>
+          <div class="age-badge">19<span>YEARS</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="message">
+      <div class="fade">
+        <div class="eyebrow">For the best elder sister</div>
+        <h2 class="section-title">19 years of being <span class="gradient">you.</span></h2>
+        <p class="section-copy">No giant speech. Just a small reminder that your presence matters, your chaos is memorable, and having a sister like you is one of those things that gets more valuable with time.</p>
+      </div>
+
+      <div class="glass-grid">
+        <article class="glass-card fade"><div class="icon">🌷</div><h3>Always family</h3><p>Through good days, terrible days, random arguments and completely random conversations — family stays.</p></article>
+        <article class="glass-card fade"><div class="icon">✨</div><h3>Keep shining</h3><p>Keep building the version of yourself that makes you proud. Nineteen is only the opening chapter.</p></article>
+        <article class="glass-card fade"><div class="icon">🎂</div><h3>Today is yours</h3><p>No pressure to have everything figured out. Enjoy the day, eat something ridiculous, and make a good memory.</p></article>
+      </div>
+
+      <div class="letter">
+        <div class="letter-card fade">
+          <h3>One small message.</h3>
+          <p>Happy Birthday, Didi. I may not say it every day, but I genuinely value having you in my life. I hope this year gives you more peace, more confidence, more laughter, and a lot of moments that make you think, “Yep, life is actually pretty good.” Stay exactly the kind of person who can be both annoying and unforgettable. That's a very elite sister skill.</p>
+          <p style="margin-top:16px;color:#fff8ff;font-weight:800">— Your brother 🤍</p>
+        </div>
+        <div class="count-card fade">
+          <div><div class="count-number">19</div><div class="count-label">years of Titli</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="surprise" id="surprise">
+      <div class="surprise-box fade">
+        <div class="eyebrow">One last thing</div>
+        <h2 class="section-title" style="margin-top:14px">Ready for the <span class="gradient">surprise?</span></h2>
+        <button class="primary" id="revealBtn">Open it ✨</button>
+        <div class="reveal" id="reveal">
+          <p>Here’s to 19: more freedom, more confidence, better memories, fewer unnecessary problems, and absolutely no shortage of cake. Happy Birthday, Titli Didi. ❤️</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>Made specially for Titli Didi · 20 August 2026</footer>
+</div>
+
+<audio id="bgMusic" loop preload="auto">
+  <!-- Put your music file at assets/birthday.mp3 -->
+  <source src="assets/birthday.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById('bgMusic');
+  const soundBtn = document.getElementById('soundBtn');
+  let musicStarted = false;
+
+  soundBtn.addEventListener('click', async () => {
+    try {
+      if (music.paused) {
+        await music.play();
+        musicStarted = true;
+        soundBtn.textContent = '♫ Playing';
+      } else {
+        music.pause();
+        soundBtn.textContent = '♫ Music';
+      }
+    } catch (e) {
+      soundBtn.textContent = '♫ Add music';
+    }
+  });
+
+  function heartBurst(){
+    const symbols=['♡','♥','✦','✧'];
+    const h=document.createElement('div');h.className='heart';
+    h.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    h.style.left=(Math.random()*100)+'vw';
+    h.style.setProperty('--x',((Math.random()-.5)*180)+'px');
+    h.style.animationDuration=(5+Math.random()*5)+'s';
+    h.style.fontSize=(12+Math.random()*18)+'px';
+    document.body.appendChild(h);setTimeout(()=>h.remove(),10000);
+  }
+  setInterval(heartBurst,900);
+
+  function triggerConfetti(){
+    for(let i=0;i<85;i++){
+      const c=document.createElement('div');c.className='confetti';
+      c.style.left=(Math.random()*100)+'vw';
+      c.style.setProperty('--dx',((Math.random()-.5)*260)+'px');
+      c.style.animationDelay=(Math.random()*.25)+'s';
+      c.style.width=(5+Math.random()*6)+'px';c.style.height=(8+Math.random()*10)+'px';
+      c.style.background=['#ff9edb','#bca2ff','#ffd782','#ffffff'][Math.floor(Math.random()*4)];
+      document.body.appendChild(c);setTimeout(()=>c.remove(),2400);
+    }
+  }
+
+  document.getElementById('revealBtn').addEventListener('click',()=>{
+    document.getElementById('reveal').classList.add('open');
+    document.getElementById('revealBtn').textContent='Happy Birthday, Didi ❤️';
+    triggerConfetti();
+  });
+
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
+  },{threshold:.14});
+  document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+
+  // Optional: tapping anywhere can start music after the browser has allowed interaction.
+  document.addEventListener('click', async ()=>{
+    if(!musicStarted && !music.paused) return;
+  }, {once:true});
+</script>
+</body>
+</html>
